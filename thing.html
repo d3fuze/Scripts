@@ -1,0 +1,2157 @@
+
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt"
+      class="">
+<head>
+    <meta charset="utf-8">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.apcefrs.org.br/',
+        AccountUUID: '76903506efbf46568074231352fed05d',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: 'c4011602',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Fri May 09 21:53:47 UTC 2025',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialPostPageUuid: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'blog-search',
+        InitialPageUuid: '3d32cc8afae64b4c8470cc0b7697d4d3',
+        InitialPageId: '1147278615',
+        InitialEncodedPageAlias: 'YmxvZy1zZWFyY2g=',
+        InitialHeaderUuid: '7678b35ad11e4c899b14654404129710',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '53860',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        HasCustomDomain: true,
+        SimpleSite: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'pt',
+        currentLocale: 'pt',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: -1,
+            NavbarLiveHomePage: 'https://www.apcefrs.org.br/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: false,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'BLOG_SEARCH_RESULTS_TEMPLATE',
+        isRuntimeServer: true,
+        isInEditor: false,
+        hasNativeStore: false,
+        defaultLang: 'pt',
+        hamburgerMigration: null,
+        isFlexSite : false
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+
+<link rel="canonical" href="https://www.apcefrs.org.br/blog-search">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Search Results
+</title>
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon"
+      href="https://irp.cdn-website.com/c4011602/dms3rep/multi/57.png"/>
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/c4011602/site_favicon_16_1710502546758.ico"/>
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://lirp.cdn-website.com/"/>
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script id='d-js-dmapi'>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if (!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function () {
+            },
+            getCurrentDeviceType: function () {
+                return window._currentDevice;
+            },
+            runOnReady: (ns, fn) => {
+                const safeFn = dmAPI.toSafeFn(fn);
+                ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
+                const eventName = 'afterAjax.' + ns;
+
+                if (document.readyState === 'complete') {
+                    $.DM.events.off(eventName).on(eventName, safeFn);
+                    setTimeout(function () {
+                        safeFn({
+                            isAjax: false,
+                        });
+                    }, 0);
+                } else {
+                    window?.waitForDeferred?.('dmAjax', () => {
+                        $.DM.events.off(eventName).on(eventName, safeFn);
+                        safeFn({
+                            isAjax: false,
+                        });
+                    });
+                }
+            },
+            toSafeFn: (fn) => {
+                if (fn?.safe) {
+                    return fn;
+                }
+                const safeFn = function (...args) {
+                    try {
+                        return fn?.apply(null, args);
+                    } catch (e) {
+                        console.log('function failed ' + e.message);
+                    }
+                };
+                safeFn.safe = true;
+                return safeFn;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+      const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+            const storedWidgetCssLink = cssLinks.widget;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            if(storedWidgetCssLink) {
+                storedWidgetCssLink.disabled = true;
+                loadCssLink(storedWidgetCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    if (storedWidgetCssLink) {
+                      storedWidgetCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href && link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if (link.id && link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      } else if (link.id && link.id.includes("widgetCSS")) {
+        cssLinks.widget = link;
+        checkCss();
+      }
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function (b, a, c) {
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}
+    
+
+</style>
+<style id="cssVariables" type="text/css">
+    :root {
+  --color_1: rgba(0,0,0,1);
+  --color_2: rgba(255,255,255,1);
+  --color_3: rgba(82,82,82,1);
+  --color_4: rgba(0,66,230,1);
+  --color_5: rgba(236,236,236,1);
+  --color_6: rgba(255, 98, 55, 1);
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Abel:ital,wght@0,400&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Amiko:ital,wght@0,400;0,600;0,700&family=Give+You+Glory:ital,wght@0,400&family=Homemade+Apple:ital,wght@0,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Alata:ital,wght@0,400&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue:ital,wght@0,400&family=Be+Vietnam:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900&family=Comfortaa:ital,wght@0,300..700;1,300..700&family=Dancing+Script:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Serif+Display:ital,wght@0,400;1,400&family=Droid+Sans:ital,wght@0,400;0,700&family=Droid+Sans+Mono:ital,wght@0,400&family=Droid+Serif:ital,wght@0,400;0,700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fjalla+One:ital,wght@0,400&family=Heebo:ital,wght@0,100..900;1,100..900&family=Inter:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&amp;subset=latin-ext&amp;display=swap"  />
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Muli:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:ital,wght@0,200..700;1,200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Petit+Formal+Script:ital,wght@0,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata:ital,wght@0,400&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:ital,wght@0,300..700;1,300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Rock+Salt:ital,wght@0,400&amp;subset=latin-ext&amp;display=swap"  />
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Shadows+Into+Light:ital,wght@0,400&family=Slabo+27px:ital,wght@0,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Spartan:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900&family=Sulphur+Point:ital,wght@0,300;0,400;0,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Vidaloka:ital,wght@0,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One:ital,wght@0,400&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Red+Rose:ital,wght@0,300..700;1,300..700&family=Abril+Fatface:ital,wght@0,400&family=Fraunces:ital,wght@0,100..900;1,100..900&family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:ital,wght@0,300..700;1,300..700&family=Outfit:ital,wght@0,100..900;1,100..900&family=Aboreto:ital,wght@0,400&family=Arapey:ital,wght@0,400;1,400&family=Questrial:ital,wght@0,400&family=Marcellus:ital,wght@0,400&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;subset=latin-ext&amp;display=swap"  />
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Hedvig+Letters+Serif:ital,wght@0,400&amp;subset=latin-ext&amp;display=swap"  />
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/5453/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+
+<!-- End of RT CSS Include -->
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/9f0c9e34b7199afb83fb63e20c877f08.css" id="widgetCSS" />
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="blog-search"] #dm [data-show-on-page-only="blog-search"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/c4011602/files/c4011602_1.min.css?v=1141" id="siteGlobalCss" />
+
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style
+        id="additionalGlobalCss" type="text/css"
+>
+</style>
+
+<style id="pagestyle" type="text/css">
+    *#dm *.dmBody div.u_1982585396 .readMore a
+{
+	text-decoration:underline !important;
+}
+*#dm *.dmBody div.u_1982585396 .postArticle .blogImgLink
+{
+	height:250px !important;
+}
+*#dm *.dmBody div.u_1977781062 .dmBlogSearchInput
+{
+	border-color:rgba(147,147,147,1) !important;
+	border-radius:25px !important;
+	-moz-border-radius:25px !important;
+	-webkit-border-radius:25px !important;
+}
+*#dm *.dmBody div.u_1800137634
+{
+	background-color:rgba(255,255,255,1) !important;
+}
+
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.dmBody div.u_1982585396 .postTitle a
+{
+	font-size:20px !important;
+}
+*#dm *.dmBody div.u_1982585396 .readMore a
+{
+	font-size:14px !important;
+}
+*#dm *.dmBody div.u_1982585396
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:50px !important;
+	justify-content:normal !important;
+	align-items:center !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:start !important;
+}
+*#dm *.dmBody div.u_1800137634
+{
+	margin-left:0px !important;
+	padding-top:80px !important;
+	padding-left:40px !important;
+	padding-bottom:100px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	margin-right:0px !important;
+	padding-right:40px !important;
+	width:auto !important;
+}
+*#dm *.dmBody div.u_1977781062
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:calc(100% - 400px) !important;
+	position:relative !important;
+	height:52px !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:400px !important;
+	margin-top:12px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:start !important;
+	display:block !important;
+}
+
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-22, .size-22, .size-22 > font { font-size: 22px !important; }.font-size-35, .size-35, .size-35 > font { font-size: 35px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+
+  
+  #dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  
+</style>
+
+
+
+
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+<meta name="robots" content="noindex,follow"/>
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.apcefrs.org.br/feed/rss2"/>
+  <link type="application/atom+xml" rel="alternate" href="https://www.apcefrs.org.br/feed/atom"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.apcefrs.org.br/blog-search"/>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:image" content="https://lirp.cdn-website.com/c4011602/dms3rep/multi/opt/1200-1920w.png"/>
+  <meta property="og:image" content="https://lirp.cdn-website.com/c4011602/dms3rep/multi/opt/1200-1920w.png"/>
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="blog-search"  class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet "
+      style="padding:0;margin:0;"
+      
+    >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1779978427"> <div dmtemplateid="Hamburger" data-responsive-name="ResponsiveDesktopTopTabletHamburger" class="runtime-module-container dm-bfs dm-layout-sec hasAnimations rows-1200 hamburger-reverse layout-drawer_fixed-header dmPageBody d-page-1287459979 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1287459979" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div class="p_hfcontainer showOnMedium"> <div id="hamburger-drawer" class="hamburger-drawer layout-drawer" layout="4821f93654f44cd4b3564a9fb45461dd===header" data-origin="top" data-auto-height="true"> <div class="u_1562745609 dmRespRow" style="text-align: center;" id="1562745609"> <div class="dmRespColsWrapper" id="1018994090"> <div class="u_1886619146 dmRespCol small-12 medium-12 large-12 empty-column" id="1886619146"></div> 
+</div> 
+</div> 
+ <div class="u_1059726341 dmRespRow middleDrawerRow" style="text-align: center;" id="1059726341"> <div class="dmRespColsWrapper" id="1830998045"> <div class="dmRespCol small-12 u_1275653116 medium-6 large-6" id="1275653116"> <nav class="u_1104219951 effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HIDE" id="1104219951" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item  dmUDNavigationItem_00  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         APCEF/RS
+        " data-auto="page-text-style">APCEF/RS<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/conselho-deliberativo" class="unifiednav__item  dmUDNavigationItem_010101491200  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Conselho Deliberativo
+          " data-auto="page-text-style">Conselho Deliberativo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/conselho-fiscal" class="unifiednav__item  dmUDNavigationItem_010101460158  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Conselho Fiscal
+          " data-auto="page-text-style">Conselho Fiscal<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/diretoria" class="unifiednav__item  dmUDNavigationItem_01010149909  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Diretoria
+          " data-auto="page-text-style">Diretoria<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/#Gestao" class="unifiednav__item  dmUDNavigationItem_010101929983  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Gestão
+          " data-auto="page-text-style">Gest&atilde;o<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/estatuto" class="unifiednav__item  dmUDNavigationItem_010101782987  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Estatuto" data-auto="page-text-style">Estatuto<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/história" class="unifiednav__item  dmUDNavigationItem_010101904764  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           História
+          " data-auto="page-text-style">Hist&oacute;ria<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/regionais" class="unifiednav__item  dmUDNavigationItem_010101855750  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Regionais
+          " data-auto="page-text-style">Regionais<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/espacos-bem-viver" class="unifiednav__item  dmUDNavigationItem_010101849241  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Espaços Bem Viver
+        " data-auto="page-text-style">Espa&ccedil;os Bem Viver<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="https://bluware.info/eliteweb/home/login.php?user=apcefrs" class="unifiednav__item  dmUDNavigationItem_010101322249  " target="_blank" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Inscrição" data-auto="page-text-style">Inscri&ccedil;&atilde;o<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/cassino" class="unifiednav__item  dmUDNavigationItem_010101170330  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Cassino
+          " data-auto="page-text-style">Cassino<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/itapirubá" class="unifiednav__item  dmUDNavigationItem_010101139227  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Itapirubá
+          " data-auto="page-text-style">Itapirub&aacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/porto-alegre" class="unifiednav__item  dmUDNavigationItem_010101253257  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Porto Alegre
+          " data-auto="page-text-style">Porto Alegre<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/são-francisco-de-paula" class="unifiednav__item  dmUDNavigationItem_010101264138  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           São Francisco de Paula
+          " data-auto="page-text-style">S&atilde;o Francisco de Paula<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/tramandaí" class="unifiednav__item  dmUDNavigationItem_010101121919  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Tramandaí
+          " data-auto="page-text-style">Tramanda&iacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/inscrições" class="unifiednav__item  dmUDNavigationItem_010101732051  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Classificação" data-auto="page-text-style">Classifica&ccedil;&atilde;o<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/regulamentos#Servicos" class="unifiednav__item  dmUDNavigationItem_010101475403  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Serviços" data-auto="page-text-style">Servi&ccedil;os<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/apcef-saúde" class="unifiednav__item  dmUDNavigationItem_010101270387  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           APCEF Saúde
+          " data-auto="page-text-style">APCEF Sa&uacute;de<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/fale_conosco" class="unifiednav__item  dmUDNavigationItem_010101383874  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Fale Conosco" data-auto="page-text-style">Fale Conosco<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/receba_noticias" class="unifiednav__item  dmUDNavigationItem_010101288135  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Receba Notícias" data-auto="page-text-style">Receba Not&iacute;cias<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/convênios" class="unifiednav__item  dmUDNavigationItem_010101923590  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Convênios
+          " data-auto="page-text-style">Conv&ecirc;nios<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/jurídico" class="unifiednav__item  dmUDNavigationItem_01010161305  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Seguro Jurídico
+          " data-auto="page-text-style">Seguro Jur&iacute;dico<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/loja-apcef" class="unifiednav__item  dmUDNavigationItem_01010148059  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Loja APCEF
+          " data-auto="page-text-style">Loja APCEF<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/seguro-cirurgia" class="unifiednav__item  dmUDNavigationItem_010101949749  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Seguro Cirurgia
+          " data-auto="page-text-style">Seguro Cirurgia<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/atualizacao" class="unifiednav__item  dmUDNavigationItem_010101709682  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Atualização Cadastral
+          " data-auto="page-text-style">Atualiza&ccedil;&atilde;o Cadastral<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/regulamentos" class="unifiednav__item  dmUDNavigationItem_010101801185  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Tabela de preço, formulários e regulamentos
+          " data-auto="page-text-style">Tabela de pre&ccedil;o, formul&aacute;rios e regulamentos<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="http://webmail.apcefrs.org.br" class="unifiednav__item  dmUDNavigationItem_010101489518  " target="_blank" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Webmail
+          " data-auto="page-text-style">Webmail<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/salões-de-festa8a8005c1" class="unifiednav__item  dmUDNavigationItem_010101283566  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Salões de Festa
+        " data-auto="page-text-style">Sal&otilde;es de Festa<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/porto-alegree08d7333" class="unifiednav__item  dmUDNavigationItem_010101536815  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Porto Alegre
+          " data-auto="page-text-style">Porto Alegre<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/bagé" class="unifiednav__item  dmUDNavigationItem_010101945627  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Bagé
+          " data-auto="page-text-style">Bag&eacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/cachoeira-do-sul" class="unifiednav__item  dmUDNavigationItem_010101507539  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Cachoeira do Sul
+          " data-auto="page-text-style">Cachoeira do Sul<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/erechim" class="unifiednav__item  dmUDNavigationItem_010101935237  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Erechim
+          " data-auto="page-text-style">Erechim<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/estrela" class="unifiednav__item  dmUDNavigationItem_010101361549  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Estrela
+          " data-auto="page-text-style">Estrela<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/farroupilha" class="unifiednav__item  dmUDNavigationItem_010101986330  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Farroupilha
+          " data-auto="page-text-style">Farroupilha<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/frederico-westphalen" class="unifiednav__item  dmUDNavigationItem_010101854277  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Frederico Westphalen
+          " data-auto="page-text-style">Frederico Westphalen<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/itaara" class="unifiednav__item  dmUDNavigationItem_010101516671  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Itaara
+          " data-auto="page-text-style">Itaara<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/palmeira-das-missões" class="unifiednav__item  dmUDNavigationItem_010101283099  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Palmeira das Missões
+          " data-auto="page-text-style">Palmeira das Miss&otilde;es<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/passo-fundo" class="unifiednav__item  dmUDNavigationItem_01010185478  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Passo Fundo
+          " data-auto="page-text-style">Passo Fundo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/santa-rosa" class="unifiednav__item  dmUDNavigationItem_010101378663  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Santa Rosa
+          " data-auto="page-text-style">Santa Rosa<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/santo-ângelo" class="unifiednav__item  dmUDNavigationItem_010101846219  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Santo Ângelo
+          " data-auto="page-text-style">Santo &Acirc;ngelo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/são-leopoldo" class="unifiednav__item  dmUDNavigationItem_010101934747  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           São Leopoldo
+          " data-auto="page-text-style">S&atilde;o Leopoldo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact" class="unifiednav__item  dmUDNavigationItem_010101943230  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Comunicação
+        " data-auto="page-text-style">Comunica&ccedil;&atilde;o<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/aposentados" class="unifiednav__item  dmUDNavigationItem_010101240085  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Aposentados
+        " data-auto="page-text-style">Aposentados<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/cultura" class="unifiednav__item  dmUDNavigationItem_01010141244  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Cultura
+        " data-auto="page-text-style">Cultura<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/defesa-da-caixa" class="unifiednav__item  dmUDNavigationItem_010101889050  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Defesa da Caixa
+        " data-auto="page-text-style">Defesa da Caixa<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/direitos" class="unifiednav__item  dmUDNavigationItem_010101141594  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Direitos
+        " data-auto="page-text-style">Direitos<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/esportes" class="unifiednav__item  dmUDNavigationItem_010101898637  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Esportes
+        " data-auto="page-text-style">Esportes<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/jurídicodb6ef29b" class="unifiednav__item  dmUDNavigationItem_010101692784  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Jurídico
+        " data-auto="page-text-style">Jur&iacute;dico<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/sedes-apcef" class="unifiednav__item  dmUDNavigationItem_010101559782  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Sedes
+        " data-auto="page-text-style">Sedes<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/bagé54438351" class="unifiednav__item  dmUDNavigationItem_010101301234  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Bagé
+          " data-auto="page-text-style">Bag&eacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/cachoeira-do-sul051a22e9" class="unifiednav__item  dmUDNavigationItem_010101195397  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Cachoeira do Sul
+          " data-auto="page-text-style">Cachoeira do Sul<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/erechimfdb7461d" class="unifiednav__item  dmUDNavigationItem_010101875784  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Erechim
+          " data-auto="page-text-style">Erechim<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/estrelabdb433db" class="unifiednav__item  dmUDNavigationItem_010101577210  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Estrela
+          " data-auto="page-text-style">Estrela<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/farroupilha017e5d09" class="unifiednav__item  dmUDNavigationItem_010101501261  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Farroupilha
+          " data-auto="page-text-style">Farroupilha<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/frederico-westphalenaae7ab14" class="unifiednav__item  dmUDNavigationItem_010101607064  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Frederico Westphalen
+          " data-auto="page-text-style">Frederico Westphalen<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ijuí" class="unifiednav__item  dmUDNavigationItem_010101206445  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Ijuí
+          " data-auto="page-text-style">Iju&iacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/itaarabd70ecc3" class="unifiednav__item  dmUDNavigationItem_010101241640  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Itaara
+          " data-auto="page-text-style">Itaara<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/palmeira-das-missõesf9461b7b" class="unifiednav__item  dmUDNavigationItem_010101983299  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Palmeira das Missões
+          " data-auto="page-text-style">Palmeira das Miss&otilde;es<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/passo-fundo06bc045b" class="unifiednav__item  dmUDNavigationItem_010101900746  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Passo Fundo
+          " data-auto="page-text-style">Passo Fundo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/porto-alegre87611332" class="unifiednav__item  dmUDNavigationItem_010101973538  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Porto Alegre
+          " data-auto="page-text-style">Porto Alegre<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/santa-rosa03718c85" class="unifiednav__item  dmUDNavigationItem_010101633180  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Santa Rosa
+          " data-auto="page-text-style">Santa Rosa<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/santo-ângelod199635c" class="unifiednav__item  dmUDNavigationItem_010101730350  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Santo Ângelo
+          " data-auto="page-text-style">Santo &Acirc;ngelo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/são-leopoldo769525f3" class="unifiednav__item  dmUDNavigationItem_010101956217  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           São Leopoldo
+          " data-auto="page-text-style">S&atilde;o Leopoldo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/social" class="unifiednav__item  dmUDNavigationItem_010101934823  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Social e Lazer
+        " data-auto="page-text-style">Social e Lazer<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/blog" class="unifiednav__item  dmUDNavigationItem_010101796855  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Notícias" data-auto="page-text-style">Not&iacute;cias<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/noticias" class="unifiednav__item  dmUDNavigationItem_010101382237  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Notícias Anteriores" data-auto="page-text-style">Not&iacute;cias Anteriores<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="dmRespCol small-12 u_1714290716 medium-6 large-6" id="1714290716"> <h3 class="dmNewParagraph" data-element-type="paragraph" id="1687230853" style="transition: opacity 1s ease-in-out;"> <font style="color:var(--color_2);"> <b> <span class="lh-1 font-size-22" style="font-weight:700;">Siga-Nos!</span> 
+</b> 
+</font> 
+</h3> <div class="u_1957063957 align-center text-align-center dmSocialHub gapSpacing" id="1957063957" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://www.facebook.com/apcefrs" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.instagram.com/apcefrs/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.youtube.com/@APCEFRSgaucha" target="_blank" dm_dont_rewrite_url="true" aria-label="youtube" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Youtube&apos;)"> <span class="dmSocialYoutube dm-social-icons-youtube oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1789341536 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1789341536"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1088451790"/></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1962630101 dmRespRow" style="text-align: center;" id="1962630101"> <div class="dmRespColsWrapper" id="1181917953"> <div class="u_1575996741 dmRespCol small-12 medium-12 large-12 empty-column" id="1575996741"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div class="site_content"> <div id="hamburger-header-container" class="showOnMedium hamburger-header-container p_hfcontainer"> <div id="hamburger-header" class="hamburger-header p_hfcontainer" layout="44dc38f951e9489490b055748e10ba9f===header" has-shadow="true"> <div class="u_1705692124 dmRespRow" style="text-align: center;" id="1705692124"> <div class="dmRespColsWrapper" id="1469942216"> <div class="u_1655486006 dmRespCol small-12 large-3 medium-3" id="1655486006"> <div class="u_1923160809 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1923160809"> <a href="/" id="1573522578" file="false"><img src="https://lirp.cdn-website.com/c4011602/dms3rep/multi/opt/logo+%281%29-1920w.png" id="1761992403" class="" data-dm-image-path="https://irp.cdn-website.com/c4011602/dms3rep/multi/logo+%281%29.png" width="311" height="68" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div class="u_1046094613 dmRespCol small-12 large-4 medium-4 empty-column" id="1046094613"></div> 
+ <div class="u_1182335627 dmRespCol small-12 large-5 medium-5" id="1182335627"> <div class="u_1706460445 dmRespRow" id="1706460445"> <div class="dmRespColsWrapper" id="1123717980"> <div class="u_1149775186 dmRespCol small-12 medium-12 large-12 empty-column" id="1149775186"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <button class="showOnMedium layout-drawer-hamburger hamburger-on-header" id="layout-drawer-hamburger" aria-label="menu"> <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+</button> 
+ <div class="dmHeaderContainer fHeader d-header-wrapper showOnLarge"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" layout="29bf4fa55d88450885fbcefc03615aa2===header" secondary-image="https://lirp.cdn-website.com/c4011602/dms3rep/multi/opt/logo+%281%29-1920w.png" has-secondary-image="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1549030757 dmRespRow dmDefaultListContentRow" style="text-align:center" id="1549030757"> <div class="dmRespColsWrapper" id="1431344771"> <div class="u_1557991883 small-12 dmRespCol large-3 medium-3" id="1557991883"> <div class="u_1571236780 imageWidget align-center hasFullWidth" data-widget-type="image" id="1571236780" data-element-type="image"> <a href="/" id="1520954146"><img src="https://lirp.cdn-website.com/c4011602/dms3rep/multi/opt/APCEF-RS_Novo-Slogan-copy-01-1920w.png" id="1845143334" class="" data-dm-image-path="https://irp.cdn-website.com/c4011602/dms3rep/multi/APCEF-RS_Novo-Slogan-copy-01.png" width="1920" height="577" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div class="u_1092081645 dmRespCol small-12 large-6 medium-6" id="1092081645"> <div class="u_1283991934 widget-f6a6cd dmCustomWidget" data-lazy-load="" data-title="" id="1283991934" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="f6a6cdf9cb5c46769b5603c7960cc686" data-widget-version="162" data-widget-config="eyJsb3R0aWUiOiJodHRwczovL2Fzc2V0czQubG90dGllZmlsZXMuY29tL3BhY2thZ2VzL2xmMjBfeGJmMWJlOHguanNvbiIsImxvdHRpZU9wdGlvbnMiOiJsb29wIn0="> <div class="lottie"></div> 
+ <div class="lottie-link"></div> 
+</div> 
+ <div class="u_1761095688 default dmBlogSearch" searchpage="blog-search" id="1761095688" dmle_extension="internal_blog_search" data-element-type="internal_blog_search" wr="true" icon="true" surround="true" adwords="" placeholder="Pesquisar notícias"> <div class="dmBlogSearchWrapper"><!--  position relative --><input type="text" placeholder="Pesquisar notícias" class="dmBlogSearchInput" aria-label="Search" maxlength="100" data-placeholder-original="Pesquisar notícias"/> <div class="dmBlogSearchClickOverlay"></div> 
+ <div class="dmBlogSearchIcon dm-icon-search2"></div> 
+<!--  position absolute --></div> 
+</div> 
+</div> 
+ <div class="u_1917316562 dmRespCol small-12 large-1 medium-1" id="1917316562"> <a data-display-type="block" class="u_1621818286 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="/#FORMULARIODECONTATO" data-element-type="dButtonLinkId" id="1621818286"> <span class="iconBg" id="1064385676"> <span class="icon hasFontIcon icon-star" id="1961440157"></span> 
+</span> 
+ <span class="text" id="1371550796">Associe-se</span> 
+</a> 
+</div> 
+ <div class="u_1140325038 dmRespCol small-12 large-2 medium-2" id="1140325038"> <a data-display-type="block" class="u_1862548346 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://bluware.info/eliteweb/home/login.php?user=apcefrs" data-element-type="dButtonLinkId" id="1862548346" target="_blank"> <span class="iconBg" id="1936483334"> <span class="icon hasFontIcon icon-star" id="1505193914"></span> 
+</span> 
+ <span class="text" id="1643567591">Autoatendimento</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1768292982 dmRespRow" style="text-align: center;" id="1768292982"> <div class="dmRespColsWrapper" id="1680789823"> <div class="u_1334677945 dmRespCol small-12 medium-12 large-12" id="1334677945"> <span id="1816888004"></span> 
+ <nav class="u_1006825730 effect-bottom main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_1" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1006825730" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item  dmUDNavigationItem_00  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         APCEF/RS
+        " data-auto="page-text-style">APCEF/RS<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/conselho-deliberativo" class="unifiednav__item  dmUDNavigationItem_010101491200  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Conselho Deliberativo
+          " data-auto="page-text-style">Conselho Deliberativo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/conselho-fiscal" class="unifiednav__item  dmUDNavigationItem_010101460158  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Conselho Fiscal
+          " data-auto="page-text-style">Conselho Fiscal<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/diretoria" class="unifiednav__item  dmUDNavigationItem_01010149909  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Diretoria
+          " data-auto="page-text-style">Diretoria<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/#Gestao" class="unifiednav__item  dmUDNavigationItem_010101929983  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Gestão
+          " data-auto="page-text-style">Gest&atilde;o<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/estatuto" class="unifiednav__item  dmUDNavigationItem_010101782987  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Estatuto" data-auto="page-text-style">Estatuto<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/história" class="unifiednav__item  dmUDNavigationItem_010101904764  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           História
+          " data-auto="page-text-style">Hist&oacute;ria<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/regionais" class="unifiednav__item  dmUDNavigationItem_010101855750  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Regionais
+          " data-auto="page-text-style">Regionais<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/espacos-bem-viver" class="unifiednav__item  dmUDNavigationItem_010101849241  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Espaços Bem Viver
+        " data-auto="page-text-style">Espa&ccedil;os Bem Viver<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="https://bluware.info/eliteweb/home/login.php?user=apcefrs" class="unifiednav__item  dmUDNavigationItem_010101322249  " target="_blank" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Inscrição" data-auto="page-text-style">Inscri&ccedil;&atilde;o<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/cassino" class="unifiednav__item  dmUDNavigationItem_010101170330  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Cassino
+          " data-auto="page-text-style">Cassino<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/itapirubá" class="unifiednav__item  dmUDNavigationItem_010101139227  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Itapirubá
+          " data-auto="page-text-style">Itapirub&aacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/porto-alegre" class="unifiednav__item  dmUDNavigationItem_010101253257  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Porto Alegre
+          " data-auto="page-text-style">Porto Alegre<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/são-francisco-de-paula" class="unifiednav__item  dmUDNavigationItem_010101264138  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           São Francisco de Paula
+          " data-auto="page-text-style">S&atilde;o Francisco de Paula<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/tramandaí" class="unifiednav__item  dmUDNavigationItem_010101121919  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Tramandaí
+          " data-auto="page-text-style">Tramanda&iacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/inscrições" class="unifiednav__item  dmUDNavigationItem_010101732051  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Classificação" data-auto="page-text-style">Classifica&ccedil;&atilde;o<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/regulamentos#Servicos" class="unifiednav__item  dmUDNavigationItem_010101475403  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Serviços" data-auto="page-text-style">Servi&ccedil;os<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/apcef-saúde" class="unifiednav__item  dmUDNavigationItem_010101270387  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           APCEF Saúde
+          " data-auto="page-text-style">APCEF Sa&uacute;de<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/fale_conosco" class="unifiednav__item  dmUDNavigationItem_010101383874  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Fale Conosco" data-auto="page-text-style">Fale Conosco<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/receba_noticias" class="unifiednav__item  dmUDNavigationItem_010101288135  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Receba Notícias" data-auto="page-text-style">Receba Not&iacute;cias<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/convênios" class="unifiednav__item  dmUDNavigationItem_010101923590  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Convênios
+          " data-auto="page-text-style">Conv&ecirc;nios<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/jurídico" class="unifiednav__item  dmUDNavigationItem_01010161305  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Seguro Jurídico
+          " data-auto="page-text-style">Seguro Jur&iacute;dico<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/loja-apcef" class="unifiednav__item  dmUDNavigationItem_01010148059  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Loja APCEF
+          " data-auto="page-text-style">Loja APCEF<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/seguro-cirurgia" class="unifiednav__item  dmUDNavigationItem_010101949749  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Seguro Cirurgia
+          " data-auto="page-text-style">Seguro Cirurgia<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/atualizacao" class="unifiednav__item  dmUDNavigationItem_010101709682  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Atualização Cadastral
+          " data-auto="page-text-style">Atualiza&ccedil;&atilde;o Cadastral<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/regulamentos" class="unifiednav__item  dmUDNavigationItem_010101801185  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Tabela de preço, formulários e regulamentos
+          " data-auto="page-text-style">Tabela de pre&ccedil;o, formul&aacute;rios e regulamentos<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="http://webmail.apcefrs.org.br" class="unifiednav__item  dmUDNavigationItem_010101489518  " target="_blank" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Webmail
+          " data-auto="page-text-style">Webmail<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/salões-de-festa8a8005c1" class="unifiednav__item  dmUDNavigationItem_010101283566  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Salões de Festa
+        " data-auto="page-text-style">Sal&otilde;es de Festa<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/porto-alegree08d7333" class="unifiednav__item  dmUDNavigationItem_010101536815  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Porto Alegre
+          " data-auto="page-text-style">Porto Alegre<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/bagé" class="unifiednav__item  dmUDNavigationItem_010101945627  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Bagé
+          " data-auto="page-text-style">Bag&eacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/cachoeira-do-sul" class="unifiednav__item  dmUDNavigationItem_010101507539  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Cachoeira do Sul
+          " data-auto="page-text-style">Cachoeira do Sul<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/erechim" class="unifiednav__item  dmUDNavigationItem_010101935237  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Erechim
+          " data-auto="page-text-style">Erechim<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/estrela" class="unifiednav__item  dmUDNavigationItem_010101361549  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Estrela
+          " data-auto="page-text-style">Estrela<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/farroupilha" class="unifiednav__item  dmUDNavigationItem_010101986330  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Farroupilha
+          " data-auto="page-text-style">Farroupilha<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/frederico-westphalen" class="unifiednav__item  dmUDNavigationItem_010101854277  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Frederico Westphalen
+          " data-auto="page-text-style">Frederico Westphalen<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/itaara" class="unifiednav__item  dmUDNavigationItem_010101516671  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Itaara
+          " data-auto="page-text-style">Itaara<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/palmeira-das-missões" class="unifiednav__item  dmUDNavigationItem_010101283099  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Palmeira das Missões
+          " data-auto="page-text-style">Palmeira das Miss&otilde;es<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/passo-fundo" class="unifiednav__item  dmUDNavigationItem_01010185478  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Passo Fundo
+          " data-auto="page-text-style">Passo Fundo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/santa-rosa" class="unifiednav__item  dmUDNavigationItem_010101378663  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Santa Rosa
+          " data-auto="page-text-style">Santa Rosa<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/santo-ângelo" class="unifiednav__item  dmUDNavigationItem_010101846219  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Santo Ângelo
+          " data-auto="page-text-style">Santo &Acirc;ngelo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/são-leopoldo" class="unifiednav__item  dmUDNavigationItem_010101934747  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           São Leopoldo
+          " data-auto="page-text-style">S&atilde;o Leopoldo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact" class="unifiednav__item  dmUDNavigationItem_010101943230  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Comunicação
+        " data-auto="page-text-style">Comunica&ccedil;&atilde;o<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/aposentados" class="unifiednav__item  dmUDNavigationItem_010101240085  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Aposentados
+        " data-auto="page-text-style">Aposentados<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/cultura" class="unifiednav__item  dmUDNavigationItem_01010141244  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Cultura
+        " data-auto="page-text-style">Cultura<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/defesa-da-caixa" class="unifiednav__item  dmUDNavigationItem_010101889050  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Defesa da Caixa
+        " data-auto="page-text-style">Defesa da Caixa<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/direitos" class="unifiednav__item  dmUDNavigationItem_010101141594  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Direitos
+        " data-auto="page-text-style">Direitos<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/esportes" class="unifiednav__item  dmUDNavigationItem_010101898637  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Esportes
+        " data-auto="page-text-style">Esportes<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/jurídicodb6ef29b" class="unifiednav__item  dmUDNavigationItem_010101692784  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Jurídico
+        " data-auto="page-text-style">Jur&iacute;dico<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/sedes-apcef" class="unifiednav__item  dmUDNavigationItem_010101559782  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Sedes
+        " data-auto="page-text-style">Sedes<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/bagé54438351" class="unifiednav__item  dmUDNavigationItem_010101301234  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Bagé
+          " data-auto="page-text-style">Bag&eacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/cachoeira-do-sul051a22e9" class="unifiednav__item  dmUDNavigationItem_010101195397  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Cachoeira do Sul
+          " data-auto="page-text-style">Cachoeira do Sul<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/erechimfdb7461d" class="unifiednav__item  dmUDNavigationItem_010101875784  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Erechim
+          " data-auto="page-text-style">Erechim<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/estrelabdb433db" class="unifiednav__item  dmUDNavigationItem_010101577210  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Estrela
+          " data-auto="page-text-style">Estrela<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/farroupilha017e5d09" class="unifiednav__item  dmUDNavigationItem_010101501261  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Farroupilha
+          " data-auto="page-text-style">Farroupilha<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/frederico-westphalenaae7ab14" class="unifiednav__item  dmUDNavigationItem_010101607064  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Frederico Westphalen
+          " data-auto="page-text-style">Frederico Westphalen<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/ijuí" class="unifiednav__item  dmUDNavigationItem_010101206445  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Ijuí
+          " data-auto="page-text-style">Iju&iacute;<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/itaarabd70ecc3" class="unifiednav__item  dmUDNavigationItem_010101241640  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Itaara
+          " data-auto="page-text-style">Itaara<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/palmeira-das-missõesf9461b7b" class="unifiednav__item  dmUDNavigationItem_010101983299  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Palmeira das Missões
+          " data-auto="page-text-style">Palmeira das Miss&otilde;es<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/passo-fundo06bc045b" class="unifiednav__item  dmUDNavigationItem_010101900746  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Passo Fundo
+          " data-auto="page-text-style">Passo Fundo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/porto-alegre87611332" class="unifiednav__item  dmUDNavigationItem_010101973538  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Porto Alegre
+          " data-auto="page-text-style">Porto Alegre<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/santa-rosa03718c85" class="unifiednav__item  dmUDNavigationItem_010101633180  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Santa Rosa
+          " data-auto="page-text-style">Santa Rosa<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/santo-ângelod199635c" class="unifiednav__item  dmUDNavigationItem_010101730350  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           Santo Ângelo
+          " data-auto="page-text-style">Santo &Acirc;ngelo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/são-leopoldo769525f3" class="unifiednav__item  dmUDNavigationItem_010101956217  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+           São Leopoldo
+          " data-auto="page-text-style">S&atilde;o Leopoldo<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/social" class="unifiednav__item  dmUDNavigationItem_010101934823  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Social e Lazer
+        " data-auto="page-text-style">Social e Lazer<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/blog" class="unifiednav__item  dmUDNavigationItem_010101796855  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Notícias" data-auto="page-text-style">Not&iacute;cias<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/noticias" class="unifiednav__item  dmUDNavigationItem_010101382237  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Notícias Anteriores" data-auto="page-text-style">Not&iacute;cias Anteriores<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_blog-search"> <div id="allWrapper" class="allWrapper"> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="154" class="generalRespTmplWrapper dmRespRowsWrapper innerPageTmplBox storeDefaultPage" id="1287459979"> <div class="dmRespRow u_1800137634" id="1800137634"> <div class="dmRespColsWrapper" id="1463117078"> <div class="dmRespCol small-12 medium-12 large-12" id="1424256664"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1198730366" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="m-size-28 text-align-center size-35" style=""><span class="font-size-35 m-font-size-28" style="display: initial; color: rgb(243, 111, 33);">Buscar no Blog</span></h2> 
+</div> 
+ <div class="u_1977781062 dmBlogSearch" searchpage="blog-search" id="1977781062" dmle_extension="internal_blog_search" data-element-type="internal_blog_search" icon="true" surround="false" placeholder="Pesquisar no Blog  "> <div class="dmBlogSearchWrapper"><!--  position relative --><input type="text" placeholder="Pesquisar no Blog  " class="dmBlogSearchInput" aria-label="Search" maxlength="100" data-placeholder-original="Pesquisar no Blog  "/> <div class="dmBlogSearchClickOverlay"></div> 
+ <div class="dmBlogSearchIcon dm-icon-search2"></div> 
+<!--  position absolute --></div> 
+</div> 
+ <div class="u_1982585396 mainBlog large_list" id="1982585396" dmle_extension="internal_blog_list" data-element-type="internal_blog_list" show-images="true" trim-title="true" show-blog-title="true" posts-animation="fadeInUp" show-action-text="true" text-align="left" icon="true" surround="false" list-layout="large_list" visible-items="20" visible-post-lines="3" search-tags="" search-term="'" more-posts-text="Show More" header-type="H2" posts-padding="10" posts-per-row="3" show-author="true" text-box-padding="false" action-text="Leia mais" skip-post-index="-1" blog-posts-feature-flag="true" data-image-hover-effect="zoomout" show-more-posts-text="false"> <h2 class="blog-name">Nenhum resultado encontrado para '<b dmle_is_text="true">'</b>'</h2> 
+ <div></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="dmRespRow u_1248652706" id="1248652706"> <div class="dmRespColsWrapper" id="1303475575"> <div class="u_1491821527 dmRespCol small-12 large-8 medium-8" id="1491821527"> <div class="u_1752222472 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1752222472" style="transition: none; text-align: left; display: block;"><p style=""><span style="font-weight: bold; display: initial; color: var(--color_2);">APCEF/RS</span></p><p><span style="display: initial; color: var(--color_2);">Associa&ccedil;&atilde;o do Pessoal da Caixa Econ&ocirc;mica Federal do Rio Grande do Sul</span></p><p><span style="display: initial; color: var(--color_2);">Av. Coronel Marcos, 851 Pedra Redonda Porto Alegre/RS&nbsp; CEP 91760-000</span></p><p><span class="" style="display: initial; color: var(--color_2);"><span style="display: initial; color: var(--color_2);">Telefone: (51) 3268-1611</span> 
+</span></p></div> 
+ <div class="dmNewParagraph u_1828587192" data-element-type="paragraph" data-version="5" id="1828587192" style="transition: none; text-align: left; display: block;"><p><a href="/privacy" runtime_url="/privacy" type="page" style="color: var(--color_2); display: unset; font-weight: bold;">Pol&iacute;tica de privacidade</a></p></div> 
+ <div class="u_1549907890 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1549907890" style="transition: none; text-align: left; display: block;"><p><a href="/fale_conosco" runtime_url="/fale_conosco" type="page" style="display: initial; font-weight: bold; color: var(--color_2);">FALE CONOSCO</a></p></div> 
+</div> 
+ <div class="u_1435627619 dmRespCol small-12 large-4 medium-4" id="1435627619"> <div class="u_1738488522 align-center text-align-center dmSocialHub gapSpacing" id="1738488522" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://www.facebook.com/apcefrs" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="zoomout"></span> 
+</a> 
+ <a href="https://www.instagram.com/apcefrs/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="zoomout"></span> 
+</a> 
+ <a href="https://www.youtube.com/@APCEFRSgaucha" target="_blank" dm_dont_rewrite_url="true" aria-label="youtube" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Youtube&apos;)"> <span class="dmSocialYoutube dm-social-icons-youtube oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="zoomout"></span> 
+</a> 
+ <a href="mailto:apcefrs@apcefrs.org.br" dm_dont_rewrite_url="true" aria-label="email" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style8" aria-hidden="true" data-hover-effect="zoomout"></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+<!-- ========= JS Section ========= -->
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "PORTUGUESE"
+    window.isSitePreview = false;
+</script>
+<script>
+    window.customWidgetsFunctions["f6a6cdf9cb5c46769b5603c7960cc686~162"] = function (element, data, api) {
+        var animation;
+var started = false;
+var frames;
+var linkHref = element.querySelector('a') && element.querySelector('a').href;
+if(!linkHref && data.config.lottieOptions === 'loop' ) {
+    element.classList.add('noCursor');
+}
+
+
+if(!window.bodymovin && !window.bodymovinProsmie) {
+    var script = document.createElement('script');
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js";
+    document.head.appendChild(script);
+    window.bodymovinProsmie = new Promise(function(resolve) {
+        script.onload = function() {
+            resolve();
+            animation = createAnimation();
+            startAnimation();
+        }
+    })
+
+} else if(window.bodymovin) {
+
+    animation = createAnimation();
+    startAnimation();
+
+} else if(window.bodymovinProsmie) {
+    window.bodymovinProsmie.then(function() {
+        animation = createAnimation();
+        startAnimation();
+    })
+}
+
+var lottieOptionsMap = {
+    'loop': onLoop,
+    'hover': onHover,
+    'click': onClick
+}
+
+function startAnimation() {
+    animation.addEventListener('data_ready', function() {
+        frames = animation.getDuration(true);
+        lottieOptionsMap[data.config.lottieOptions]();
+        started = true;
+    })
+
+}
+
+function onLoop() {
+    initiateLink()
+    animation.play();
+}
+
+function createAnimation () {
+    var lottieAnimation = element.querySelector('.lottie svg');
+    var container =  element.querySelector('.lottie')
+    if(lottieAnimation) {
+        container.removeChild(lottieAnimation)
+    }
+
+    return bodymovin.loadAnimation({
+        container: container, // Required
+        path: data.config.lottie, // Required
+        renderer: 'svg', // Required
+        loop: data.config.lottieOptions === 'loop', // Optional
+        autoplay: data.config.lottieOptions === 'loop', // Optional
+    })
+}
+
+function onClick() {
+    var clicked = false;
+    var savedEvent = null;
+    var eventName = data.device === 'mobile' ? 'touchend' : 'click'
+    
+    element.addEventListener(eventName, function(event) {
+        savedEvent = event;
+        
+        if(window.parent.$ && window.parent.$.Editor && !window.parent.document.body.classList.contains('previewMode')) {
+            return;
+        }
+        
+        if(clicked) {
+            return;
+        }
+        event.preventDefault();
+        event.stopPropagation();
+        clicked = true;
+        animation.play();
+    }, { capture: true })
+    
+    
+    animation.addEventListener('complete', function(event) {
+        var link = element.querySelector('.lottie-link a');
+        if(link) {
+            var href = link.href;
+            if(/^(mailto:|sms:|tel:)/.test(href)) {
+                document.location.href = href;
+                return;  
+            } 
+            if(link.type === 'url' || link.type === 'file') {
+                link.click();
+                return;
+            }
+            window._modules.runtime.routerAPI.navigationService.ajaxNavigationService._ajaxNavigateToLink(href, link, savedEvent);
+            delete savedEvent;
+
+        }
+    });
+}
+
+function initiateLink() {
+    var eventName = data.device === 'mobile' ? 'touchend' : 'click'
+    var savedEvent = null;
+    var lottieElement = element.querySelector('.lottie');
+    if(!lottieElement) {
+        return;
+    }
+    
+    lottieElement.addEventListener(eventName, function(event) {
+        var link = element.querySelector('.lottie-link a');
+        if(link) {
+            var href = link.href;
+            if(/^(mailto:|sms:|tel:)/.test(href)) {
+                document.location.href = href;
+                return;  
+            }
+            if(link.type === 'url' || link.type === 'file') {
+                link.click();
+                return;
+            }
+            window._modules.runtime.routerAPI.navigationService.ajaxNavigationService._ajaxNavigateToLink(link.href, link, event);
+        }
+    }, { capture: true })
+
+}
+
+function onHover() {
+    initiateLink();
+    var rect = element.getBoundingClientRect();
+    element.addEventListener('mousemove', function(event){
+        if(!frames) {
+            return;
+        }
+    
+        var relativeLocation = frames*((event.clientX - rect.left)/rect.width);
+        var currentFrame = Math.max(Math.min(Math.floor(relativeLocation), frames), 0);
+        window.requestAnimationFrame(function() {
+            animation.goToAndStop(currentFrame, true)
+        })
+        
+    }, { capture: true });
+}
+
+    };
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_5453";
+    var build = "2025-05-08T14_49_29";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2025-05-08T14_49_29";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id='d-js-params'>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/5453';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/5453';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["isAutomation.test"] =false;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'mapbox';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] =true;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.storefrontV3.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+    rtFlags["editor.classicHybrid.photogallery.fix"] =true;
+    rtFlags["runtime.lottieOverflow"] =false;
+    rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+    rtFlags["contact.form.browserValidation.enabled"] =true;
+    rtFlags["streamline.monolith.personalization.supportMultipleConditions.enabled"] =false;
+    rtFlags["runtime.cwv.report.cls.enabled"] =true;
+    rtFlags["editor.link.on.container"] =true;
+    rtFlags["flex.runtime.popup.with.show"] =true;
+    rtFlags["contact.form.useActiveForm"] =true;
+    rtFlags["runtime.ssr.productStore.internal.observer"] =true;
+    rtFlags["runtime.ssr.productCustomizations"] =true;
+    rtFlags["flex.megaMenu.a11y"] =false;
+</script>
+<script src="https://static.cdn-website.com/mnlt/production/5453/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"  id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="https://static.cdn-website.com/mnlt/production/5453/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script>
+    
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+    if (!window.location.search) {
+        return;
+    }
+	const cleanParams = window.location.search.substring(1); // Strip ?
+	const queryParams = cleanParams.split('&');
+
+	const expires = 'expires=' + new Date().getTime() + 24 * 60 * 60 * 1000;
+	const domain = 'domain=' + window.location.hostname;
+	const path = "path=/";
+
+	queryParams.forEach((param) => {
+		const [key, value = ''] = param.split('=');
+		if (key.startsWith('utm_')) {
+			const cookieName = "_dm_rt_" + key.substring(4);
+			const cookie = cookieName + "=" + value;
+			const joined = [cookie, expires, domain, path].join(";");
+			document.cookie = joined;
+		}
+	});
+}());
+</script>
+<script type="text/javascript" >
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: 'c4011602'
+});
+
+// snowplow queries element styles so we wait until CSS calculations are done.
+requestAnimationFrame(() => {
+	dmsnowplow('trackPageView');
+	_dm_insite.forEach((rule) => {
+		// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+		// the tracking is in popup.js
+		if (rule.actionName !== "popup") {
+			dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+		}
+		window?.waitForDeferred?.('dmAjax', () => {
+			$.DM.events.trigger('event-ruleTriggered', {value: rule});
+		});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Fechar (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Compartilhar"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Alternar tela cheia "></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Aumentar/diminuir zoom"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Anterior (seta para esquerda)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Próximo (seta para a direita)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+        data-locale="pt_PT"></div>
+<!-- Alias: c4011602 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<!--  End Script tags -->
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+</body>
+</html>
